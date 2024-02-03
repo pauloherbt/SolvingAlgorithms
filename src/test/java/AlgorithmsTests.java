@@ -3,7 +3,7 @@ import basicSortAlgorithms.InsertionSort;
 import basicSortAlgorithms.SelectionSort;
 import org.junit.Assert;
 import org.junit.Test;
-import java.util.*;
+import recursiveSortAlgorithms.QuickSort;
 
 public class AlgorithmsTests {
     int[] arrayUnordered = {2,8,5,3,9,4};
@@ -21,5 +21,8 @@ public class AlgorithmsTests {
         arrayUnordered = new int[]{2, 8, 5, 3, 9, 4,1};
         Assert.assertArrayEquals(new int[]{1,2,3,4,5,8,9},SelectionSort.sort(arrayUnordered));
     }
-
+    @Test
+    public void quickSortShouldSortArray(){
+        Assert.assertArrayEquals(arrayOrdered, QuickSort.sort(arrayUnordered));
+    }
 }
